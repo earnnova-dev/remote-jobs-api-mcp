@@ -1,0 +1,25 @@
+[project]
+name = "remote-jobs-api-mcp"
+version = "1.0.0"
+description = "MCP server: live, normalized remote-job data across 5 boards via the keyless Remote Jobs API."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+keywords = ["mcp", "model-context-protocol", "jobs", "remote-work", "hr", "api"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Topic :: Office/Business",
+]
+dependencies = [
+    "mcp>=1.2.0,<2",
+]
+
+[project.scripts]
+remote-jobs-api-mcp = "remote_jobs_api.mcp_server:main"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["remote_jobs_api"]
